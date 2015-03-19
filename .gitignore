@@ -126,3 +126,7 @@ bower_components/
 git_components/
 .idea/
 asset/roundy
+asset/common
+asset/silver
+asset/bronze
+asset/*.*
