@@ -25,24 +25,15 @@
           .when('/circular', {
             templateUrl: gsn.getThemeUrl('/views/circular-view.html'),
             storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/circular/flyer', {
-            templateUrl: gsn.getThemeUrl('/views/circular-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/circular/text', {
-            templateUrl: gsn.getThemeUrl('/views/circular-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
+            caseInsensitiveMatch: true,
+            reloadOnSearch: false
           })
           .when('/circular/list', {
             templateUrl: gsn.getThemeUrl('/views/circular-view.html'),
             storeRequired: true,
             caseInsensitiveMatch: true
           })
-          .when('/circular/grid', {
+          .when('/circular/text', {
             templateUrl: gsn.getThemeUrl('/views/circular-view.html'),
             storeRequired: true,
             caseInsensitiveMatch: true
