@@ -6,7 +6,7 @@
       // storeRequired attribute identify route require a store selection
       $routeProvider
           .when('/', {
-            templateUrl: gsn.getThemeUrl('/views/home.html'),
+            templateUrl: gsn.getContentUrl('/views/home.html'),
             caseInsensitiveMatch: true
           })
           .when('/aisle50', {
