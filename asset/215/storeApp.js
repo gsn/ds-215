@@ -51,13 +51,9 @@
             storeRequired: true,
             caseInsensitiveMatch: true
           })
-          /*.when('/coupons/printable', {
+          .when('/coupons/printable', {
             templateUrl: gsn.getThemeUrl('/views/coupons-printable.html'),
             storeRequired: true,
-            caseInsensitiveMatch: true
-          })*/
-          .when('/coupons/printable', {
-            redirectTo: '/coupons',
             caseInsensitiveMatch: true
           })
           .when('/coupons/digital', {
@@ -310,7 +306,7 @@ storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeou
   };
 
   $scope.activate();
-  //#region Internal Methods        
+  //#region Internal Methods
   function getData() {
     return [
         {
@@ -1029,7 +1025,7 @@ storeApp.controller('RoundyProfileCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$ti
 
   $scope.activate();
 
-  //#region Internal Methods        
+  //#region Internal Methods
   function updateProfile(profile) {
     var deferred = $q.defer();
 
