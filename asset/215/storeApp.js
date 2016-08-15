@@ -1,4 +1,4 @@
-﻿var storeApp = angular
+var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
 
@@ -202,6 +202,10 @@
           })
           .when('/maintenance', {
             templateUrl: gsn.getThemeUrl('/views/roundy-apology-page.html'),
+            caseInsensitiveMatch: true
+          })
+          .when('/test-pharmacy', {
+            templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'),
             caseInsensitiveMatch: true
           })
           .otherwise({
