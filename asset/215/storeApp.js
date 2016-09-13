@@ -206,7 +206,8 @@ var storeApp = angular
           })
           .when('/test-pharmacy', {
             templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'),
-            caseInsensitiveMatch: true
+            caseInsensitiveMatch: true,
+            controller: 'PharmacyCtrl'
           })
           .otherwise({
             templateUrl: gsn.getThemeUrl('/views/static-content.html'),
@@ -1051,4 +1052,40 @@ storeApp.controller('RoundyProfileCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$ti
     return deferred.promise;
   }
   //#endregion
+}]);
+
+
+// PharmacyCtrl
+storeApp.controller('PharmacyCtrl',
+  ['$scope', 'gsnProfile', 'gsnApi', '$timeout', 'gsnStore', '$localStorage', function ($scope, gsnProfile, gsnApi, $timeout, gsnStore, $localStorage) {
+  $scope.activate = activate;
+  $scope.storesById = {};
+  $scope.vm = {};
+
+  function activate() {
+    $scope.vm.pharmacyStoreId = $localStorage.pharmacyStoreId || 0;
+
+    gsnStore.getStores().then(function (rsp) {
+      $scope.stores = rsp.response;
+
+      // prebuild list base on roundy spec (ﾉωﾉ)
+      // make sure that it is order by state, then by name
+      $scope.storesById = gsnApi.mapObject($scope.stores, 'StoreId');
+    });
+  }
+  $scope.getFullStateName = function (store) {
+    return '=========' + store.LinkState.FullName + '=========';
+  };
+
+  $scope.getStoreDisplayName = function (store) {
+    return store.StoreName + ' - ' + store.PrimaryAddress + '(#' + store.StoreNumber + ')';
+  };
+
+  $scope.selectPharmacy = function() {
+    var store = $scope.storesById[$scope.vm.pharmacyStoreId];
+    $localStorage.pharmacyStoreId = store.StoreId;
+    gsnApi.goUrl($scope.decodeServerUrl(store.Redirect), '_blank');
+  }
+
+  $scope.activate();
 }]);
