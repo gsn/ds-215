@@ -1,4 +1,4 @@
-﻿/*---------- Global CSS ----------*/
+/*---------- Global CSS ----------*/
 * {
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: html;
@@ -82,6 +82,12 @@ legend {
     background-color: #005e6e;
     color:lightgrey;
   }
+
+  .btnMarianos-outer {
+    bottom: 15px;
+    position: absolute;
+    right: 270px;
+}
 
   .couponNavBtn
   {
@@ -440,7 +446,7 @@ legend {
   color: #ffffff;
 }
 
-.dropdown-menu {    
+.dropdown-menu {
     background-color: #a5acaf;
     left: 32px;
     min-width: 214px;
@@ -792,7 +798,7 @@ address {
   background-color: #005e6e;
   color: #ffffff;
 }
-.storeSearch button:hover {  
+.storeSearch button:hover {
   color: lightgrey;
 }
 
@@ -1061,17 +1067,17 @@ caption {
       display: inline;
       list-style: none;
       float: left;
-      text-align: center;      
+      text-align: center;
     }
 
       .shoppingListButtons ul li a {
         display: block;
         cursor: pointer;
-        font-size: 10px;       
+        font-size: 10px;
       }
 
       .shoppingListButtons ul li div {
-          font-size: 10px; 
+          font-size: 10px;
           cursor:default;
           color:#5e7803;
       }
@@ -1283,8 +1289,8 @@ caption {
   }
 
     .savingsInfoContainer .btn-elipsis:hover
-  {   
-    background-color:#69923a;   
+  {
+    background-color:#69923a;
   }
 
 .savingsInfoContainer .btn-block
@@ -1310,7 +1316,7 @@ margin-left: -120px;
   border: 1px dashed green;
   padding: 0;
   border-radius: 5px;
- 
+
 }
 	.savingsInfo:hover, .adPodInfo:hover {
 		border-style:solid;
@@ -1337,9 +1343,9 @@ margin-left: -120px;
     margin: auto;
   }
 
-.digital { 
-  display:block; 
-  padding-top:5px;  
+.digital {
+  display:block;
+  padding-top:5px;
   overflow: hidden;
   position: relative;
   line-height:14px;
@@ -2099,12 +2105,12 @@ td.nutr-border {
 }
 
 /*---------- Static Pages ----------*/
-.staticTabs .nav 
+.staticTabs .nav
 {
   margin-bottom: 10px;
 }
 
-.staticTabs .nav > li 
+.staticTabs .nav > li
 {
   border-bottom: none;
 }
@@ -2132,7 +2138,7 @@ td.nutr-border {
   {
     margin-top: 0;
   }
-          
+
   .navAd {
     margin: 0 68px;
   }
@@ -2187,7 +2193,7 @@ td.nutr-border {
   button[data-analytics-event="ClickPrint"]
   {
     display:none;
-  }  
+  }
 
   .itemInfo
   {
@@ -2354,13 +2360,13 @@ td.nutr-border {
 {
   background-color: white;
   border: solid 1px;
-  border-radius: 10px;  
+  border-radius: 10px;
   text-align: center;
   display: table;
   cursor: pointer;
 }
 
-.panel-button span 
+.panel-button span
 {
     vertical-align:middle;
     display: table-cell;
@@ -2441,7 +2447,7 @@ dropdown-submenu{position:relative;}
 /*---------- bootstrap auto width ----------*/
 @media (min-width: none) {
     .col-xs-auto { width: auto; }
-	
+
 }
 @media (min-width: 750px) {
     .col-sm-auto { width: auto; }
@@ -2505,7 +2511,7 @@ dropdown-submenu{position:relative;}
 }
 .padding-top-sm
 {
-  padding-top:10px;  
+  padding-top:10px;
 }
 
 .padding-top-lg
@@ -2520,7 +2526,7 @@ dropdown-submenu{position:relative;}
     overflow: hidden;
 }
 .cssSlideUp.ng-hide {
-    padding:0;    
+    padding:0;
     height:0;
 }
 .ng-hide-add, .ng-hide-remove {
