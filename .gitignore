@@ -130,3 +130,4 @@ asset/common
 asset/silver
 asset/bronze
 asset/*.*
+.DS_Store
